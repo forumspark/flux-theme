@@ -1,0 +1,11 @@
+.enable-two-factor {
+    @apply space-y-6;
+
+    &__key {
+        @apply font-medium;
+    }
+
+    input {
+        @apply max-w-sm;
+    }
+}

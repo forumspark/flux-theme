@@ -1,0 +1,10 @@
+.page-header {
+    @apply flex items-center py-4;
+    &__logo {
+        @apply max-w-7xl mx-auto w-full h-full;
+
+        img {
+            @apply h-full;
+        }
+    }
+}

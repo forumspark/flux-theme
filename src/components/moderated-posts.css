@@ -1,0 +1,29 @@
+.panel--moderated-posts .panel__content {
+    @apply divide-y divide-primary-200;
+}
+
+.moderated-post {
+    &__details {
+        @apply grid grid-cols-2 divide-x;
+
+        > div {
+            @apply bg-primary-50 shadow-highlight flex flex-col justify-center p-4;
+        }
+    }
+
+    &__reason {
+        @apply border-t border-primary-100 bg-primary-50 shadow-highlight flex flex-col justify-center p-4;
+    }
+
+    &__content {
+        @apply bg-primary-50 border-t border-primary-100 shadow-highlight flex flex-col justify-center p-4;
+    }
+
+    &__topic {
+        @apply font-bold;
+    }
+
+    &__meta {
+        @apply text-primary-500 text-sm;
+    }
+}

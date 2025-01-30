@@ -1,0 +1,14 @@
+.spoiler {
+    @apply my-4;
+}
+
+.spoiler-header {
+    @apply px-3 py-2 text-white font-bold bg-gradient-to-r from-secondary-700 to-primary-500 rounded;
+    color:#fff;
+    cursor:pointer;
+    font-weight:700;
+}
+
+.spoiler-content {
+    @apply py-px px-5 rounded mt-2 bg-zinc-50 dark:bg-zinc-950;
+}

@@ -1,0 +1,13 @@
+.panel--all-time {
+    .data-grid__header, .data-grid__row {
+        @apply grid-cols-3;
+
+        & > div:first-child {
+            @apply col-span-2;
+        }
+
+        & > div:last-child {
+            @apply text-right justify-end;
+        }
+    }
+}

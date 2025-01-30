@@ -1,0 +1,11 @@
+.empty-message {
+    @apply p-4 text-center text-sm italic;
+}
+
+.empty-message.empty-message--inline {
+    @apply p-0;
+}
+
+.stats-users .empty-message {
+    @apply text-left;
+}

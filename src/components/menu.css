@@ -1,0 +1,68 @@
+/** Navigation **/
+.main-menu {
+    @apply flex items-center justify-between;
+}
+
+.main-menu-left {
+    @apply flex;
+}
+
+.main-menu-right {
+    @apply hidden sm:flex sm:items-center sm:ml-6;
+}
+
+.sub-menu {
+    @apply dark:bg-zinc-900;
+}
+
+.nav-links {
+    @apply hidden space-x-6 sm:-my-px sm:flex mt-px;
+}
+
+.nav-link {
+    @apply inline-flex items-center py-4;
+    @apply text-base leading-5 dark:text-zinc-400 text-zinc-700;
+    @apply hover:text-zinc-600 dark:hover:text-zinc-300;
+    @apply focus:outline-none focus:text-zinc-600 dark:focus:text-zinc-300;
+    @apply transition duration-200 ease-in-out;
+}
+
+.nav-link-active {
+    @apply text-zinc-800 dark:text-white font-bold focus:outline-none focus:border-indigo-700;
+}
+
+.responsive-nav-toggle {
+    @apply sm:hidden inline-flex items-center justify-center;
+    @apply py-2 text-primary-600 hover:text-primary-500  focus:outline-none focus:text-primary-500 transition duration-150 ease-in-out
+}
+
+.nav-links--responsive {
+    @apply p-2 sm:hidden absolute inset-x-0 bg-white dark:bg-zinc-900 w-full z-10 shadow-lg;
+}
+
+.responsive-nav__link {
+    @apply block w-full pl-3 pr-4 py-2 text-left text-base font-medium transition duration-150 ease-in-out rounded;
+    @apply text-primary-500 hover:text-primary-500 hover:bg-white/25 focus:outline-none focus:text-primary-600 focus:bg-white/25;
+    @apply dark:text-zinc-100 dark:hover:text-white;
+}
+
+.responsive-nav__link--active {
+    @apply text-primary-500 hover:text-primary-500 dark:text-white dark:hover:text-white bg-white/30 focus:outline-none focus:text-primary-600 focus:bg-white/30
+}
+
+/** Moderator / admin style menus **/
+.menu {
+    @apply p-4 text-sm;
+
+    &__items {
+        @apply space-y-2;
+    }
+
+    &-item--labelled {
+        @apply flex items-center justify-between;
+    }
+
+    &-item__active {
+        @apply font-bold;
+    }
+}

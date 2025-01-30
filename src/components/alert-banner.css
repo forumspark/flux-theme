@@ -1,0 +1,7 @@
+.alert-banner-wrapper {
+    @apply z-20 fixed bottom-0 w-full;
+}
+
+.alert-banner {
+    @apply mx-auto w-full max-w-xl shadow-lg bg-slate-800 text-white p-4 text-sm rounded mb-6 flex justify-between items-center;
+}

@@ -1,0 +1,16 @@
+.panel--users-online {
+    .data-grid__row,
+    .data-grid__header {
+        @apply grid-cols-1 sm:grid-cols-4;
+
+        & > div:nth-child(2),
+        & > div:nth-child(3),
+        & > div:nth-child(4) {
+            @apply hidden sm:flex items-center ;
+        }
+
+        .avatar-layout__meta {
+            @apply block sm:hidden;
+        }
+    }
+}

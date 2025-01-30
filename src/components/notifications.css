@@ -1,0 +1,35 @@
+.notifications .dropdown__content {
+    @apply pb-0 bg-zinc-50 text-zinc-700;
+}
+
+.notifications .notifications__dropdown-trigger {
+    @apply relative mt-2;
+}
+
+.notifications__list {
+    @apply divide-y divide-zinc-200 max-h-[400px] overflow-y-auto;
+}
+
+.notifications__actions {
+    @apply bg-zinc-100 rounded-b-md border-t border-zinc-200 text-slate-600 text-sm flex items-center space-x-2 justify-end p-2;
+}
+
+.notification {
+    @apply relative p-3 text-zinc-500 text-sm bg-zinc-50 hover:bg-zinc-100 cursor-pointer;
+    @apply flex items-start gap-2;
+
+    &__meta {
+        @apply mt-1 text-xs text-zinc-500;
+        &__read {
+            @apply ml-1;
+        }
+    }
+
+    &__link {
+        @apply absolute inset-0;
+    }
+}
+
+.notification__dot {
+    @apply w-2 h-2 rounded-full bg-primary-500 absolute top-0 right-0 -mr-0.5;
+}

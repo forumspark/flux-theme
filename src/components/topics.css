@@ -1,0 +1,86 @@
+.topic-row {
+    @apply min-w-0 sm:flex p-3 sm:p-0;
+}
+
+.topic-row__bulk-select {
+    @apply hidden flex-shrink-0 p-3 sm:flex items-center justify-center;
+}
+
+.topic-row__marker {
+    @apply hidden w-12 flex-shrink-0 p-3 sm:flex items-center justify-center;
+}
+
+.topic-row__name {
+    @apply min-w-0 sm:flex;
+    @apply flex-1 sm:p-3 flex-col justify-center;
+
+    & > div {
+        @apply flex items-center space-x-2 min-w-0;
+
+        a {
+            @apply block truncate
+        }
+    }
+}
+
+.topic-row__badges {
+    @apply sm:px-3 flex-shrink-0 flex items-center sm:space-x-2 text-zinc-600;
+}
+
+.topic-row__name .description {
+    @apply text-xs text-zinc-400;
+}
+
+.sub-header .topic-row__author {
+    @apply text-center;
+}
+
+.sub-header .topic-row__author,
+.sub-header .topic-row__name,
+.sub-header .topic-row__details .replies,
+.sub-header .topic-row__details .views,
+.sub-header .topic-row__details .last-post {
+    @apply p-2;
+}
+
+.sub-header .topic-row__details {
+    @apply p-0 border-l border-zinc-200 dark:border-zinc-800
+}
+
+.topic-row__author {
+    @apply hidden items-center sm:flex flex-shrink-0 justify-center w-1/6 text-sm border-l border-zinc-200 dark:border-zinc-800
+}
+
+.topic-row__name .author,
+.topic-row__details .last-post .time {
+    @apply text-sm text-gray-500;
+}
+
+.topic-row__details {
+    @apply sm:w-1/3 flex-shrink-0 flex sm:divide-x sm:border-l divide-zinc-200 dark:divide-zinc-800 border-zinc-200 dark:border-zinc-800;
+}
+
+.topic-row__details .replies,
+.topic-row__details .views {
+    @apply hidden w-24 flex-shrink-0 sm:flex items-center justify-center;
+}
+
+.topic-row__details .last-post {
+    @apply flex-1 sm:p-3 text-sm;
+}
+
+.topic-row__details .last-post__detail {
+    @apply space-x-1 flex sm:block sm:space-x-0;
+}
+
+.topic-marker--read {
+    @apply text-zinc-400;
+}
+
+.topic-marker--unread {
+    @apply text-zinc-500;
+}
+
+.topic-marker--hot {
+    @apply text-primary-500;
+}

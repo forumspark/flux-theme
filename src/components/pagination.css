@@ -1,0 +1,57 @@
+.pagination {
+    @apply mt-6;
+
+    &__layout {
+        @apply flex items-center justify-between;
+    }
+
+    &__simple {
+        @apply flex justify-between flex-1 sm:hidden;
+    }
+
+    &__windowed {
+        @apply hidden sm:flex-1 sm:flex sm:items-center sm:justify-between;
+
+        &__label {
+            @apply text-sm text-zinc-600 dark:text-zinc-200 leading-5;
+
+            span {
+                @apply font-medium
+            }
+        }
+
+        &__window {
+            @apply relative z-0 inline-flex rtl:flex-row-reverse shadow-sm rounded-md;
+        }
+    }
+
+    &-link {
+        @apply relative inline-flex items-center px-2 py-2 text-sm font-medium text-zinc-600 dark:text-zinc-200 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 cursor-default leading-5;
+        &--page {
+            @apply px-4;
+        }
+        &--current {
+            @apply bg-primary-500 text-white;
+        }
+    }
+
+    a.pagination-link {
+        @apply cursor-pointer focus:outline-none focus:z-20 focus:ring ring-primary-300 focus:border-primary-300 active:bg-primary-50 active:text-slate-700 transition ease-in-out duration-150;
+    }
+
+    &-link + &-link {
+        @apply -ml-px;
+    }
+
+    &-link:first-child {
+        @apply rounded-l-md;
+    }
+
+    &-link:last-child {
+        @apply rounded-r-md;
+    }
+
+    &-link--disabled {
+        @apply opacity-65;
+    }
+}

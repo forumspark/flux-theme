@@ -1,0 +1,6 @@
+.panel--social-accounts {
+    .data-grid__row,
+    .data-grid__header {
+        @apply  grid-cols-2;
+    }
+}

@@ -1,0 +1,7 @@
+{
+  "name":"Flux Sidebar",
+  "version":"0.0.1",
+  "build_dir":"build",
+  "theme_id": 15,
+  "layout_file": "layout_sidebar.html"
+}

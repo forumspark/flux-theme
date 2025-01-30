@@ -1,0 +1,11 @@
+.container {
+    @apply w-full max-w-none mx-0;
+}
+
+.truncate-child {
+    @apply min-w-0;
+}
+
+.truncate-child > * {
+    @apply truncate;
+}

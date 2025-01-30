@@ -1,0 +1,30 @@
+.poll {
+
+    .option {
+        @apply grid grid-cols-2 divide-x divide-zinc-200 dark:divide-zinc-800;
+
+        &__label {
+            @apply p-4 bg-zinc-100 dark:bg-zinc-900 text-right;
+        }
+
+        &__result {
+            @apply flex items-center p-4;
+        }
+
+        &__percent {
+            @apply ml-1 text-sm text-zinc-500;
+        }
+    }
+}
+
+.poll-options {
+    @apply space-y-2 mb-2;
+}
+
+.progress-bar-container {
+    @apply bg-slate-200 rounded-sm overflow-hidden;
+}
+
+.progress-bar {
+    @apply bg-gradient-to-b from-primary-500 to-primary-400 h-3 min-w-[5px] shadow-highlight border border-primary-500 rounded-sm;
+}

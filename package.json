@@ -1,0 +1,16 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "tailwindcss --postcss -i src/app.css -o build/theme.css --watch",
+        "build": "NODE_ENV=production tailwindcss --postcss -i src/app.css -o build/theme.css --minify"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.10",
+        "@tailwindcss/typography": "^0.5.9",
+        "autoprefixer": "^10.4.2",
+        "postcss": "^8.4.6",
+        "postcss-import": "^15.1.0",
+        "tailwindcss": "^3.1.0"
+    }
+}
