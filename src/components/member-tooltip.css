@@ -1,0 +1,35 @@
+.member-tooltip {
+    @apply bg-white dark:bg-zinc-950 shadow-xl rounded border border-primary-200 dark:border-zinc-800 overflow-hidden w-96 text-sm;
+
+    &__details {
+        @apply bg-white dark:bg-zinc-950 p-4 flex items-center text-xs;
+
+        .username {
+            @apply text-lg;
+        }
+
+        > div:last-child {
+            @apply ml-4 flex-1 text-left space-y-4;
+        }
+    }
+
+    &__detail-row {
+        @apply grid grid-cols-3;
+
+        & > div:first-child {
+            @apply font-bold;
+        }
+
+        & > div:last-child {
+            @apply text-right col-span-2;
+        }
+    }
+
+    &__actions {
+        @apply flex divide-x bg-primary-50 border-t border-primary-100 dark:bg-zinc-900 dark:border-zinc-800 dark:divide-zinc-800;
+
+        a {
+            @apply flex-1 text-center p-2;
+        }
+    }
+}

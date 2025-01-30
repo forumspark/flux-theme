@@ -1,0 +1,11 @@
+.error-message {
+    @apply p-4 text-center;
+}
+
+.error-message__title {
+    @apply text-xl;
+}
+
+.error-message__actions {
+    @apply flex items-center justify-center space-x-4;
+}

@@ -1,0 +1,7 @@
+.stats-links {
+    @apply mt-8 text-sm flex items-center justify-center space-x-1 flex-wrap sm:space-x-4;
+
+    .stats-links__divider {
+        @apply text-slate-300;
+    }
+}

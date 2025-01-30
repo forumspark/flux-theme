@@ -1,0 +1,41 @@
+.usertitle {
+    @apply mt-2 text-sm text-center;
+}
+
+.mini-profile {
+    @apply mt-2 mx-auto border border-zinc-200 dark:border-zinc-800 shadow-sm bg-zinc-50 dark:bg-zinc-950 p-3.5 rounded flex-1;
+
+    dl {
+        @apply space-y-2 text-xs;
+
+        & > div {
+            @apply flex items-center justify-between flex-wrap gap-y-1;
+        }
+
+        dt {
+            @apply font-medium;
+        }
+
+        dd {
+            @apply md:text-right text-zinc-400 dark:text-zinc-500;
+        }
+    }
+
+    &--custom {
+        dl {
+            @apply space-y-1;
+
+            & > div {
+                @apply space-y-1 block;
+            }
+
+            dt {
+                @apply block w-full text-left;
+            }
+
+            dd {
+                @apply block w-full text-left;
+            }
+        }
+    }
+}

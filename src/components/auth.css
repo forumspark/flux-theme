@@ -1,0 +1,27 @@
+.login-with-social {
+    @apply border-t mt-4 pt-4;
+
+    &__providers {
+        @apply grid grid-cols-2 gap-2 mt-1;
+    }
+}
+
+.auth-intro {
+    @apply mb-4 text-sm text-zinc-500 dark:text-zinc-300;
+}
+
+.auth-options {
+    @apply flex items-center mt-4 justify-between;
+
+    label {
+        @apply inline-flex items-center;
+
+        span {
+            @apply ml-2 text-sm;
+        }
+    }
+}
+
+.auth-actions {
+    @apply flex items-center justify-end mt-4 space-x-3;
+}

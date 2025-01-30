@@ -1,0 +1,16 @@
+.moderator-actions {
+    @apply p-4 text-sm bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 grid grid-cols-1 sm:flex items-center gap-4;
+
+    > form, > div {
+        @apply w-full sm:w-auto;
+    }
+}
+
+
+.select-group {
+    @apply flex items-center gap-2;
+
+    select {
+        @apply flex-1 sm:flex-none;
+    }
+}

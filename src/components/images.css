@@ -1,0 +1,36 @@
+img.emoji {
+    @apply w-5;
+    vertical-align: middle;
+    display: inline-block;
+    padding-bottom:0.2em;
+    margin: 0;
+
+    &.emoji--sm {
+        @apply w-4;
+    }
+}
+
+.label img.emoji {
+    @apply w-4;
+}
+
+img.emoticon {
+    vertical-align: middle;
+    display: inline-block;
+    padding-bottom:0.2em;
+    margin: 0;
+    @apply w-6
+}
+
+.signature img, .reply img, .shoutbox__message img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.messages__list .message p img {
+    display:none;
+}
+
+.signature ul, .shoutbox__message ul {
+    @apply list-disc list-outside space-y-2;
+}

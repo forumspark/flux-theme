@@ -1,0 +1,31 @@
+.user-menu {
+    @apply text-zinc-700 dark:text-zinc-200;
+
+    .user-menu__guest a{
+        @apply dark:text-zinc-200 dark:hover:text-white py-2.5;
+    }
+
+    &__trigger {
+        @apply text-zinc-600 dark:text-zinc-200 dark:hover:text-white dark:focus:text-white;
+    }
+}
+
+.user-menu .container {
+    @apply flex items-center md:px-0;
+}
+
+.user-menu__links {
+    @apply ml-auto flex items-center;
+}
+
+.user-menu__guest {
+    @apply text-sm font-medium space-x-4 sm:-my-px sm:flex;
+}
+
+.user-menu__trigger {
+    @apply bg-transparent;
+}
+
+.user-alerts {
+    @apply flex items-center space-x-4;
+}

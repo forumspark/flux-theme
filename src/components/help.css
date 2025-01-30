@@ -1,0 +1,11 @@
+.help-page {
+    @apply p-4;
+
+    .description {
+        @apply text-sm text-zinc-500;
+    }
+}
+
+.help-text {
+    @apply text-zinc-500 text-xs mt-1;
+}

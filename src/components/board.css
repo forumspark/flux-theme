@@ -1,0 +1,44 @@
+#wrap {
+}
+
+#wrap main {}
+
+.board-logo {
+    @apply shrink-0 flex items-center;
+}
+
+.board-actions {
+    @apply max-w-none my-6 py-2 gap-4 grid grid-cols-2 sm:px-0 sm:flex items-center;
+
+    &__theme-selector {
+        @apply text-zinc-700 dark:text-zinc-400 col-span-2 sm:col-span-1 sm:flex items-center text-sm sm:space-x-2 sm:mr-auto;
+
+        form {
+            @apply flex-1;
+        }
+
+        select {
+            @apply w-full;
+        }
+
+        .selected-theme {
+            @apply italic;
+        }
+    }
+
+    &__mark-read {
+        @apply text-xs mr-auto sm:mr-2;
+    }
+
+    &__time {
+        @apply flex items-center text-xs justify-end;
+
+        svg {
+            @apply text-zinc-400;
+        }
+
+        a {
+            @apply ml-1 text-zinc-700 dark:text-white font-medium;
+        }
+    }
+}

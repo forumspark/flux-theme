@@ -1,0 +1,7 @@
+.ban-period {
+    @apply mt-4 flex items-center space-x-2;
+
+    & > div:first-child {
+        @apply w-24;
+    }
+}

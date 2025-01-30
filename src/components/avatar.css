@@ -1,0 +1,27 @@
+.avatar {
+    @apply relative flex-shrink-0;
+
+    img {
+        @apply inset-0 absolute object-cover w-full h-full;
+    }
+}
+
+.avatar--lg {
+    @apply w-24 h-24;
+}
+
+.avatar--md {
+    @apply w-12 h-12;
+}
+
+.avatar--sm {
+    @apply w-8 h-8;
+}
+
+.avatar--xs {
+    @apply w-7 h-7;
+}
+
+.avatar--xxs {
+    @apply w-5 h-5 rounded-full overflow-hidden;
+}

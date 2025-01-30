@@ -1,0 +1,27 @@
+.data-grid {
+    @apply divide-y text-sm divide-zinc-200 dark:divide-zinc-800;
+}
+
+.data-grid__header {
+    @apply bg-zinc-100 dark:bg-zinc-900 font-medium text-sm grid divide-x divide-zinc-200 dark:divide-zinc-800;
+}
+
+.data-grid__header > div {
+    @apply p-2;
+}
+
+.data-grid__row {
+    @apply grid text-sm divide-x divide-zinc-200 dark:divide-zinc-800;
+}
+
+.data-grid__row > div {
+    @apply p-2 items-center sm:flex bg-zinc-50 dark:bg-zinc-900;
+}
+
+.data-grid--bans,
+.data-grid--emoticons {
+    .data-grid__header,
+    .data-grid__row {
+        @apply grid-cols-2;
+    }
+}

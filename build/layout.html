@@ -1,0 +1,83 @@
+<script>
+    const darkMode = localStorage.getItem('flux_darkMode');
+    if (darkMode === 'true') {
+      document.body.classList.add('dark');
+    }
+</script>
+
+<div x-data="Flux">
+    <div class="bg-white shadow-md dark:bg-zinc-900 text-zinc-700 dark:text-zinc-200">
+        <div class="bg-gradient-to-r h-1 from-secondary-700 to-primary-500"></div>
+        <div class="max-w-7xl mx-auto px-2 sm:px-0 gap-2 sm:gap-0 grid grid-cols-2 sm:flex items-center">
+            <div>
+                <header class="page-header">
+                    <div class="page-header__logo">
+                        <a href="/">
+                            <svg class="h-8 text-zinc-950 block dark:hidden" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 91"><path d="m51.968 4.85994-3.36 17.91996H28v15.232h18.592l-3.36 17.92H28v29.568H6.16v-65.296L0 4.85994h51.968ZM75.4994 85.4999h-20.16V3.62795l20.16-2.688009V85.4999ZM115.009 81.132c-2.091 1.7173-4.331 3.0613-6.72 4.0319-2.389.9707-4.779 1.456-7.168 1.456-4.9279 0-9.0345-1.6053-12.3199-4.816-3.2853-3.2106-4.928-8.0266-4.928-14.448v-46.256h20.1599v42.784c0 4.5547 1.829 6.8321 5.488 6.8321 1.419 0 2.725-.4107 3.92-1.2321v-48.384h20.16v64.4h-17.136l-1.456-4.3679ZM171.743 21.0999h20.384l-12.768 32.48 12.656 31.92h-20.384l-4.48-12.32-1.792-7.392-6.048 19.712h-20.384l12.768-32.48-12.656-31.92h20.384l4.48 12.32 1.792 7.392 6.048-19.712Z" fill="currentColor"/></svg>
+                            <svg class="h-8 text-white hidden dark:block" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194 91"><path d="m51.968 4.85994-3.36 17.91996H28v15.232h18.592l-3.36 17.92H28v29.568H6.16v-65.296L0 4.85994h51.968ZM75.4994 85.4999h-20.16V3.62795l20.16-2.688009V85.4999ZM115.009 81.132c-2.091 1.7173-4.331 3.0613-6.72 4.0319-2.389.9707-4.779 1.456-7.168 1.456-4.9279 0-9.0345-1.6053-12.3199-4.816-3.2853-3.2106-4.928-8.0266-4.928-14.448v-46.256h20.1599v42.784c0 4.5547 1.829 6.8321 5.488 6.8321 1.419 0 2.725-.4107 3.92-1.2321v-48.384h20.16v64.4h-17.136l-1.456-4.3679ZM171.743 21.0999h20.384l-12.768 32.48 12.656 31.92h-20.384l-4.48-12.32-1.792-7.392-6.048 19.712h-20.384l12.768-32.48-12.656-31.92h20.384l4.48 12.32 1.792 7.392 6.048-19.712Z" fill="currentColor"/></svg>
+                        </a>
+                    </div>
+                </header>
+            </div>
+            <div class="sm:ml-6 flex justify-end"><!-- TOPMENU --></div>
+            <div class="py-2 sm:py-0 col-span-2 w-full sm:w-auto sm:border-0 border-t border-zinc-100 dark:border-zinc-800 sm:ml-auto flex items-center justify-end space-x-4">
+                <div class="flex items-center space-x-2 mt-0.5 border-r pr-4">
+                    <div>
+                        <input x-model="darkMode" type="checkbox" class="mt-1 hidden"/>
+                        <div x-ref="toggle" @click="toggle"
+                             :class="darkMode ? 'switch--active' : 'switch--inactive'"
+                             class="switch switch--sm"
+                        >
+                            <div
+                                    class="switch__toggle"
+                            ></div>
+                        </div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="icon icon--sm">
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+                    </svg>
+                </div>
+                <!-- USERMENU -->
+            </div>
+        </div>
+    </div>
+
+    <div id="wrap" class="max-w-7xl mx-auto px-2 sm:px-0">
+        <!-- NAV -->
+        <!-- MAIN -->
+    </div>
+</div>
+
+<script>
+  function Flux () {
+    return {
+      darkMode: this.$persist(ForumSpark.darkMode).as('flux_darkMode'),
+      sidebar: this.$persist(true).as('flux_sidebar'),
+
+      init() {
+        this.$refs.toggle.classList.remove('switch--active');
+        this.$refs.toggle.classList.remove('switch--inactive');
+      },
+
+      toggle() {
+        this.darkMode = ! this.darkMode;
+        if (window.ForumSpark.currentUser) {
+          window.ForumSpark.toggleDarkMode();
+          return;
+        }
+
+        if (this.darkMode) {
+          document.body.classList.add('dark');
+        } else {
+          document.body.classList.remove('dark');
+        }
+      },
+
+      toggleSidebar() {
+        this.sidebar = ! this.sidebar
+      }
+    }
+  }
+</script>

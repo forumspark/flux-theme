@@ -1,0 +1,13 @@
+.avatar-layout {
+    @apply flex items-center space-x-2;
+
+    div:last-child {
+        @apply flex-1;
+    }
+}
+
+.panel--staff {
+    .avatar-layout__meta {
+        @apply block sm:hidden;
+    }
+}

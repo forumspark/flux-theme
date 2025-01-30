@@ -1,0 +1,14 @@
+@import url(https://fonts.bunny.net/css?family=Poppins:400,500,600);
+@import "tailwind/base.css";
+@import "base.css";
+
+@import "tailwind/components.css";
+@import "components.css";
+
+@import "tailwind/utilities.css";
+@import "utilities.css";
+
+.tippy-box[data-theme~='user'] {
+    @apply text-zinc-700 dark:text-zinc-400;
+    background: transparent;
+}

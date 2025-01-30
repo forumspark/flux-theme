@@ -1,0 +1,11 @@
+.menu-layout {
+    @apply sm:grid grid-cols-5 gap-4;
+
+    & > div:first-child {
+        @apply col-span-5 sm:col-span-1;
+    }
+
+    & > div:last-child {
+        @apply col-span-5 sm:col-span-4;
+    }
+}

@@ -1,0 +1,23 @@
+.alert {
+    @apply max-w-xl mx-auto mb-6 rounded-lg border-slate-300 text-slate-700 bg-slate-50 text-sm p-4 border-2;
+
+    &--notice {
+        @apply border-[#FBD14B] text-[#B37C08] bg-[#FEF7CF]
+    }
+
+    &--success {
+        @apply border-secondary-200 text-secondary-700 bg-secondary-100
+    }
+
+    &__icon {
+        @apply flex-shrink-0;
+    }
+
+    &__content {
+        @apply space-y-4
+    }
+
+    & > div {
+        @apply flex items-start gap-4;
+    }
+}
